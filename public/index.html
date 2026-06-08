@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beverly Heights | Premium Residences & Commercial spaces Gota Ahmedabad</title>
+  <meta name="description" content="Welcome to Beverly Heights, Gota, Ahmedabad. Own the height of luxury with elegant design and grand elevation. Luxury 3 & 4 BHK apartments and prime retail/office showrooms.">
+  
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+  <!-- Minimal sticky header navbar -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-container">
+      <a href="#" class="logo">
+        <span class="gold-text">BEVERLY</span> HEIGHTS
+      </a>
+      
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">Overview</a>
+        <a href="#residences" class="nav-link">Residences</a>
+        <a href="#commercial" class="nav-link">Commercial</a>
+        <a href="#amenities" class="nav-link">Amenities</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#contact" class="btn-nav">Inquire Now</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+          <i class="fa-solid fa-sun icon-sun"></i>
+          <i class="fa-solid fa-moon icon-moon"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content animate-up">
+          <span class="badge-gold">Gota, Ahmedabad</span>
+          <h1 class="hero-title" id="val-project-name">
+            Own the Height of <span class="gold-text">Luxury</span>
+          </h1>
+          <p class="hero-subtitle" id="val-tagline">
+            Elegant Design | Grand Elevation
+          </p>
+          <p class="hero-desc" id="val-description">
+            Experience premium living and corporate prominence in Gota, Ahmedabad. Beverly Heights blends modern 3 BHK & 4 BHK luxury residences with state-of-the-art ground-floor showrooms and corporate offices.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn-primary">Book Site Visit</a>
+            <a href="#about" class="btn-secondary">Explore Details</a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper animate-up delay-2">
+          <div class="hero-img-border">
+            <img src="/assets/images/hero_bg.png" alt="Beverly Heights Elevation" class="hero-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual animate-on-scroll">
+            <div class="about-img-frame">
+              <img src="/assets/images/lobby.png" alt="Premium Entrance Lobby" class="about-img">
+            </div>
+          </div>
+
+          <div class="about-details animate-on-scroll delay-1">
+            <span class="section-label gold-text">Beverly Heights Overview</span>
+            <h2>Sophisticated Spaces Designed for Modern Lifestyles</h2>
+            <div class="divider-line"></div>
+            <p>Beverly Heights stands as a RERA-approved mixed-use landmark positioned strategically in Gota. Built with architectural elegance, this project merges ultra-spacious 3 BHK & 4 BHK residences with high-visibility ground-floor showrooms and premium corporate suites.</p>
+            
+            <div class="spec-overview-grid">
+              <div class="spec-overview-card">
+                <h4>3 & 4 BHK</h4>
+                <p>Luxury Residences</p>
+              </div>
+              <div class="spec-overview-card">
+                <h4>Ground Floor</h4>
+                <p>Retail Showrooms</p>
+              </div>
+              <div class="spec-overview-card">
+                <h4>Upper Floors</h4>
+                <p>Corporate Offices</p>
+              </div>
+              <div class="spec-overview-card">
+                <h4>2026</h4>
+                <p>Possession Timeline</p>
+              </div>
+            </div>
+
+            <div class="pricing-cta">
+              <div class="price-box">
+                <span class="price-type">Residential Apartments</span>
+                <strong class="price-tag gold-text" id="val-price-res">Starts from ₹85 Lakhs</strong>
+              </div>
+              <div class="price-box">
+                <span class="price-type">Commercial Units</span>
+                <strong class="price-tag gold-text" id="val-price-comm">Starts from ₹1.2 Crores</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Residences Section -->
+    <section id="residences" class="specs-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label gold-text">Residential Collection</span>
+          <h2>Luxury Penthouses & Apartments</h2>
+          <div class="divider-line cent"></div>
+          <p class="section-desc-para">Experience comfort and privacy in spacious high-rise apartments equipped with premium specifications, multi-tier security, and Vaastu compliance.</p>
+        </div>
+
+        <div class="tabs-container">
+          <div class="tab-buttons">
+            <button class="tab-btn active" data-tab-id="res-3bhk">3 BHK Premium</button>
+            <button class="tab-btn" data-tab-id="res-4bhk">4 BHK Penthouse</button>
+          </div>
+
+          <div class="tab-content active" id="res-3bhk">
+            <div class="tab-grid">
+              <div class="tab-text">
+                <h3>3 BHK Premium Residences</h3>
+                <p class="area-tag"><i class="fa-solid fa-vector-square"></i> Super Built-up Area: <strong>~2,160 Sq.Ft.</strong></p>
+                <ul class="specs-list" id="res-specs-3bhk">
+                  <!-- Injected via JavaScript -->
+                </ul>
+                <a href="#contact" class="btn-primary" onclick="setInterest('Residential', 'Requesting 3 BHK layout info')">Request Floor Plan</a>
+              </div>
+              <div class="tab-visual">
+                <img src="/assets/images/floor_plan_3bhk.png" alt="3 BHK Floor Plan" class="floor-plan-image">
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="res-4bhk">
+            <div class="tab-grid">
+              <div class="tab-text">
+                <h3>4 BHK Sky Penthouse</h3>
+                <p class="area-tag"><i class="fa-solid fa-vector-square"></i> Super Built-up Area: <strong>~2,850 Sq.Ft.</strong></p>
+                <ul class="specs-list" id="res-specs-4bhk">
+                  <!-- Injected via JavaScript -->
+                </ul>
+                <a href="#contact" class="btn-primary" onclick="setInterest('Residential', 'Requesting 4 BHK layout info')">Inquire Pricing</a>
+              </div>
+              <div class="tab-visual">
+                <img src="/assets/images/floor_plan_4bhk.png" alt="4 BHK Floor Plan" class="floor-plan-image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Commercial Section -->
+    <section id="commercial" class="specs-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label gold-text">Commercial Landmarks</span>
+          <h2>Retail Showrooms & Corporate Suites</h2>
+          <div class="divider-line cent"></div>
+          <p class="section-desc-para">Position your business in Gota's most prestigious mixed-use tower. Double-height retail showrooms and customizable corporate layouts.</p>
+        </div>
+
+        <div class="tabs-container">
+          <div class="tab-buttons">
+            <button class="tab-btn active" data-tab-id="comm-shops">Retail Showrooms</button>
+            <button class="tab-btn" data-tab-id="comm-offices">Corporate Offices</button>
+          </div>
+
+          <div class="tab-content active" id="comm-shops">
+            <div class="tab-grid">
+              <div class="tab-text">
+                <h3>Grand Showrooms</h3>
+                <p class="area-tag"><i class="fa-solid fa-store"></i> High-visibility Ground & 1st Floor Locations</p>
+                <p class="desc-text">Perfect for bank branches, designer studios, flagship retail stores, or cafes. Features massive double-height glass facades facing the Gota corridor for maximum customer traffic.</p>
+                <ul class="specs-list" id="comm-specs-shops">
+                  <!-- Injected via JS -->
+                </ul>
+                <a href="#contact" class="btn-primary" onclick="setInterest('Commercial', 'Requesting Retail Showrooms details')">Check Availability</a>
+              </div>
+              <div class="tab-visual">
+                <img src="/assets/images/commercial.png" alt="Retail Showrooms elevation" class="commercial-cover-img">
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="comm-offices">
+            <div class="tab-grid">
+              <div class="tab-text">
+                <h3>Executive Corporate Suites</h3>
+                <p class="area-tag"><i class="fa-solid fa-briefcase"></i> Dedicated Entry Foyer & High-Speed Elevators</p>
+                <p class="desc-text">Modern workspaces designed to boost team output. Features modular partitions that support layout customizations from boutique agencies to corporate spaces.</p>
+                <ul class="specs-list" id="comm-specs-offices">
+                  <!-- Injected via JS -->
+                </ul>
+                <a href="#contact" class="btn-primary" onclick="setInterest('Commercial', 'Requesting Corporate Office layouts')">Request Quote</a>
+              </div>
+              <div class="tab-visual">
+                <img src="/assets/images/floor_plan_office.png" alt="Office Layout Floor Plan" class="floor-plan-image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="amenities-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label gold-text">Lifestyle Deck</span>
+          <h2>Lifestyle Amenities</h2>
+          <div class="divider-line cent"></div>
+        </div>
+
+        <div class="amenities-grid">
+          <div class="amenity-card">
+            <div class="amenity-img" style="background-image: url('/assets/images/amenities_pool.png');"></div>
+            <div class="amenity-info">
+              <div class="amenity-icon"><i class="fa-solid fa-water-ladder"></i></div>
+              <h3>Rooftop Infinity Pool</h3>
+              <p>Panoramic rooftop swimming pool with lounge seats and sunset gazebo areas.</p>
+            </div>
+          </div>
+
+          <div class="amenity-card">
+            <div class="amenity-img" style="background-image: url('/assets/images/lobby.png');"></div>
+            <div class="amenity-info">
+              <div class="amenity-icon"><i class="fa-solid fa-dumbbell"></i></div>
+              <h3>Smart Fitness Center</h3>
+              <p>Fully equipped indoor gym with professional training machines and free weights.</p>
+            </div>
+          </div>
+
+          <div class="amenity-card">
+            <div class="amenity-img" style="background-image: url('/assets/images/residential.png');"></div>
+            <div class="amenity-info">
+              <div class="amenity-icon"><i class="fa-solid fa-users-rectangle"></i></div>
+              <h3>Infinity Skydeck Garden</h3>
+              <p>Beautifully landscaped rooftop park, walking paths, and family relaxation alcoves.</p>
+            </div>
+          </div>
+
+          <div class="amenity-card">
+            <div class="amenity-img" style="background-image: url('/assets/images/commercial.png');"></div>
+            <div class="amenity-info">
+              <div class="amenity-icon"><i class="fa-solid fa-wifi"></i></div>
+              <h3>Executive Business Lounge</h3>
+              <p>Shared professional meeting spaces equipped with presentation monitors and high-speed Wi-Fi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Advantages -->
+    <section id="location" class="location-section">
+      <div class="container">
+        <div class="location-grid">
+          <div class="proximity-card">
+            <span class="section-label gold-text">Connectivity Hub</span>
+            <h3>Strategic Location</h3>
+            <div class="divider-line"></div>
+            <p class="rera-info">RERA Reg Number: <strong id="val-rera">PR/GJ/AHMEDABAD/Others...</strong></p>
+            
+            <div class="proximity-list">
+              <div class="prox-item">
+                <span><i class="fa-solid fa-road gold-text"></i> S.G. Highway</span>
+                <strong>3 Mins</strong>
+              </div>
+              <div class="prox-item">
+                <span><i class="fa-solid fa-compass gold-text"></i> Vaishnodevi Circle</span>
+                <strong>5 Mins</strong>
+              </div>
+              <div class="prox-item">
+                <span><i class="fa-solid fa-graduation-cap gold-text"></i> Nirma University</span>
+                <strong>6 Mins</strong>
+              </div>
+              <div class="prox-item">
+                <span><i class="fa-solid fa-hospital gold-text"></i> KD Hospital</span>
+                <strong>10 Mins</strong>
+              </div>
+              <div class="prox-item">
+                <span><i class="fa-solid fa-plane gold-text"></i> SVPI Airport</span>
+                <strong>20 Mins</strong>
+              </div>
+              <div class="prox-item">
+                <span><i class="fa-solid fa-building-columns gold-text"></i> GIFT City Corridor</span>
+                <strong>25 Mins</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-card">
+            <div class="map-placeholder">
+              <div class="map-info-badge">
+                <h4>Beverly Heights location</h4>
+                <p><i class="fa-solid fa-location-dot gold-text"></i> Gota, Near Vandematram Circle, Ahmedabad</p>
+              </div>
+              <div class="map-radar">
+                <div class="radar-ping"></div>
+                <div class="radar-dot"></div>
+              </div>
+              <div class="map-labels">
+                <span class="l-sg">S.G. Highway</span>
+                <span class="l-circle">Vaishnodevi Circle</span>
+                <span class="l-univ">Nirma Univ.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery" class="gallery-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label gold-text">Photo Tour</span>
+          <h2>Project Gallery</h2>
+          <div class="divider-line cent"></div>
+        </div>
+
+        <div class="gallery-filters">
+          <button class="filter-btn active" data-filter="all">All Photos</button>
+          <button class="filter-btn" data-filter="exterior">Exterior</button>
+          <button class="filter-btn" data-filter="interior">Interior</button>
+          <button class="filter-btn" data-filter="commercial">Commercial</button>
+          <button class="filter-btn" data-filter="amenity">Amenities</button>
+          <button class="filter-btn" data-filter="floorplan">Floor Plans</button>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Injected via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Inquiry Portal -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <span class="section-label gold-text">Get in touch</span>
+            <h2>Download Project Brochure</h2>
+            <div class="divider-line"></div>
+            <p>Submit your details to receive the pricing list, customized floor plans, site master layout, and arrange a personalized guided tour of our sales lounge.</p>
+            
+            <div class="contact-details">
+              <div class="contact-detail-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                  <h4>Call Sales Desk</h4>
+                  <a href="tel:+919876543210" id="val-phone" class="phone-link">+91 98765 43210</a>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <h4>Email Assistance</h4>
+                  <a href="mailto:sales@beverlyheights.in" id="val-email" class="email-link">sales@beverlyheights.in</a>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <h4>Project Site Address</h4>
+                  <p id="val-address">Gota, Near Vandematram Circle, Ahmedabad, Gujarat 382481</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrapper">
+            <form id="inquiry-form" class="inquiry-form">
+              <h3>Secure Consultation</h3>
+              
+              <div class="form-group">
+                <label for="form-name">Your Full Name <span class="required">*</span></label>
+                <input type="text" id="form-name" placeholder="John Doe" required>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-phone">Mobile Number <span class="required">*</span></label>
+                  <input type="tel" id="form-phone" placeholder="+91 XXXXX XXXXX" required>
+                </div>
+                <div class="form-group">
+                  <label for="form-email">Email Address</label>
+                  <input type="email" id="form-email" placeholder="john@example.com">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="form-interest">Select Property Type <span class="required">*</span></label>
+                <select id="form-interest" required>
+                  <option value="" disabled selected>Select category</option>
+                  <option value="Residential">Residential Apartments (3 & 4 BHK)</option>
+                  <option value="Commercial">Commercial Showroom & Offices</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message">Special Requirements / Message</label>
+                <textarea id="form-message" rows="3" placeholder="I would like to inquire about..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit" id="btn-submit">
+                <span class="btn-text">Submit Inquiry</span>
+                <span class="btn-loader hidden"><i class="fa-solid fa-circle-notch fa-spin"></i></span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Photo Modal Lightbox -->
+  <div class="lightbox-modal hidden" id="lightbox-modal">
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <div class="lightbox-body">
+        <img src="" alt="" id="lightbox-img">
+        <div class="lightbox-caption-box">
+          <span class="photo-category gold-text" id="lightbox-category">Category</span>
+          <h4 id="lightbox-caption">Photo Caption Description</h4>
+          <button class="btn-modal-inquire" id="btn-modal-inquire"><i class="fa-solid fa-paper-plane"></i> Send Inquiry</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Alert Notifications -->
+  <div id="toast" class="toast hidden">
+    <div class="toast-content">
+      <i class="fa-solid fa-circle-check toast-icon"></i>
+      <div class="toast-text-box">
+        <h4 id="toast-title">Thank You</h4>
+        <p id="toast-desc">Message submitted successfully.</p>
+      </div>
+      <button class="toast-close-btn" id="toast-close">&times;</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="gold-text">BEVERLY</span> HEIGHTS
+        </a>
+        <p>A premier mixed-use landmark setting new architectural elevations and luxury living standards in Gota, Ahmedabad.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/beverly_heights_/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="#about">Overview</a></li>
+          <li><a href="#residences">Residences</a></li>
+          <li><a href="#commercial">Commercial</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Downloads</h4>
+        <ul>
+          <li><a href="#contact" onclick="setInterest('Residential', 'Requesting residential brochure')">Residential Brochure</a></li>
+          <li><a href="#contact" onclick="setInterest('Commercial', 'Requesting commercial brochure')">Commercial Brochure</a></li>
+          <li><a href="#contact" onclick="setInterest('Residential', 'Requesting 3 BHK layouts')">3 BHK Layout plans</a></li>
+          <li><a href="#contact" onclick="setInterest('Residential', 'Requesting 4 BHK layouts')">4 BHK Layout plans</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-disclaimer">
+        <h4>Disclaimer</h4>
+        <p>Information presented on this website is for informational purposes only. Final designs, finishes, specifications, and layout plans are subject to change by the developer as per local guidelines. Verify all terms with RERA filings.</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; 2026 Beverly Heights. All Rights Reserved.</p>
+        <p>Designed with <span style="color: #ed4956;">&hearts;</span> for luxury lifestyles.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

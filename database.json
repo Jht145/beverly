@@ -1,0 +1,106 @@
+{
+  "content": {
+    "projectName": "Beverly Heights",
+    "tagline": "Own the Height of Luxury. Elegant Design | Grand Elevation",
+    "description": "Experience premium living and corporate prominence in Gota, Ahmedabad. Beverly Heights blends modern 3 BHK & 4 BHK luxury residences with state-of-the-art ground-floor showrooms and corporate offices. Designed for those who appreciate high elevations, grand design, and a prestigious address.",
+    "phone": "+91 98765 43210",
+    "email": "sales@beverlyheights.in",
+    "address": "Beverly Heights, near Vandematram Circle, Gota, Ahmedabad, Gujarat 382481",
+    "reraNumber": "PR/GJ/AHMEDABAD/AHMEDABAD/Others/RAA99999/080626",
+    "launchDate": "June 2026",
+    "pricing": {
+      "residential": "Starts from ₹85 Lakhs",
+      "commercial": "Starts from ₹1.2 Crores"
+    },
+    "specifications": {
+      "residential": [
+        "Earthquake resistant RCC frame structure",
+        "Vitrified Italian marble-finish tiles in living/dining room",
+        "Laminated wooden flooring in master bedroom",
+        "Premium sanitary ware & fittings (Kohler/Jaquar)",
+        "UPVC sliding window frames with mosquito nets",
+        "Video door phone security system"
+      ],
+      "commercial": [
+        "Double-height ceiling showrooms for maximum visibility",
+        "Separate dedicated elevators for corporate floors",
+        "Ample multi-level basement parking for staff & visitors",
+        "24/7 security with CCTV surveillance in common areas",
+        "High-speed fiber internet connection readiness",
+        "Power backup for all common services"
+      ]
+    }
+  },
+  "gallery": [
+    {
+      "id": "1",
+      "url": "/assets/images/hero_bg.png",
+      "caption": "Beverly Heights Grand Elevation",
+      "category": "exterior"
+    },
+    {
+      "id": "2",
+      "url": "/assets/images/lobby.png",
+      "caption": "Luxurious Double-Height Entrance Lobby",
+      "category": "interior"
+    },
+    {
+      "id": "3",
+      "url": "/assets/images/residential.png",
+      "caption": "Elegant 3BHK/4BHK Penthouse Living Space",
+      "category": "interior"
+    },
+    {
+      "id": "4",
+      "url": "/assets/images/commercial.png",
+      "caption": "Premium Ground-Floor Retail Showrooms",
+      "category": "commercial"
+    },
+    {
+      "id": "5",
+      "url": "/assets/images/amenities_pool.png",
+      "caption": "Sunset Rooftop Infinity Swimming Pool",
+      "category": "amenity"
+    },
+    {
+      "id": "6",
+      "url": "/assets/images/floor_plan_3bhk.png",
+      "caption": "3 BHK Premium Floor Plan Layout",
+      "category": "floorplan"
+    },
+    {
+      "id": "7",
+      "url": "/assets/images/floor_plan_4bhk.png",
+      "caption": "4 BHK Luxury Penthouse Floor Plan Layout",
+      "category": "floorplan"
+    },
+    {
+      "id": "8",
+      "url": "/assets/images/floor_plan_office.png",
+      "caption": "Corporate Office Floor Plan Layout",
+      "category": "floorplan"
+    }
+  ],
+  "inquiries": [
+    {
+      "id": "1780939898350",
+      "date": "2026-06-08T17:31:38.350Z",
+      "name": "Verification Bot",
+      "email": "bot@verification.com",
+      "phone": "+91 99999 88888",
+      "interestType": "Commercial",
+      "message": "Automated endpoint verification test.",
+      "status": "New"
+    },
+    {
+      "id": "1780940887101",
+      "date": "2026-06-08T17:48:07.101Z",
+      "name": "Verification Tester",
+      "email": "test@beverly.com",
+      "phone": "+91 99999 00000",
+      "interestType": "Residential",
+      "message": "Automated test suite message.",
+      "status": "New"
+    }
+  ]
+}

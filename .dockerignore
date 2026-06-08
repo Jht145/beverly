@@ -1,0 +1,23 @@
+# Ignore local dependencies
+node_modules/
+
+# Ignore local environment config
+.env
+
+# Ignore debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore Git files
+.git/
+.gitignore
+
+# Ignore local helper scripts
+search_all_strings.js
+search_all_strings.py
+test_endpoints.js
+
+# Ignore Docker descriptors
+Dockerfile
+.dockerignore

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beverly Heights | Management Dashboard</title>
+  
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="dark-dashboard">
+  <!-- Auth Screen (Login Box) -->
+  <div id="login-container" class="login-container">
+    <div class="login-card">
+      <h2>BEVERLY HEIGHTS</h2>
+      <p>Management Portal Access</p>
+      <div class="card-line"></div>
+      
+      <form id="login-form" class="login-form">
+        <div id="login-error" class="login-error hidden">Invalid credentials</div>
+        
+        <div class="form-group">
+          <label for="username"><i class="fa-solid fa-user"></i> Username</label>
+          <input type="text" id="username" placeholder="Enter username" required autocomplete="username">
+        </div>
+        
+        <div class="form-group">
+          <label for="password"><i class="fa-solid fa-lock"></i> Password</label>
+          <input type="password" id="password" placeholder="Enter password" required autocomplete="current-password">
+        </div>
+        
+        <button type="submit" class="btn-login" id="btn-login-submit">
+          <span class="btn-text">Authenticate</span>
+          <span class="btn-loader hidden"><i class="fa-solid fa-circle-notch fa-spin"></i></span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main Dashboard Screen (Hidden by default) -->
+  <div id="dashboard-container" class="dashboard-container hidden">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <span class="logo"><span class="gold-text">BEVERLY</span> ADMIN</span>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <button class="side-nav-btn active" data-tab="overview">
+          <i class="fa-solid fa-chart-line"></i> Overview
+        </button>
+        <button class="side-nav-btn" data-tab="content-edit">
+          <i class="fa-solid fa-edit"></i> Edit Content
+        </button>
+        <button class="side-nav-btn" data-tab="gallery-manage">
+          <i class="fa-solid fa-images"></i> Manage Gallery
+        </button>
+        <button class="side-nav-btn" data-tab="inquiries">
+          <i class="fa-solid fa-envelope-open-text"></i> Inquiries
+          <span id="inquiry-badge" class="badge-new hidden">0</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button id="btn-logout" class="btn-logout">
+          <i class="fa-solid fa-right-from-bracket"></i> Logout
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <!-- Top Header -->
+      <header class="topbar">
+        <div class="topbar-title">
+          <h1 id="page-title">Dashboard Overview</h1>
+        </div>
+        <div class="admin-profile">
+          <i class="fa-solid fa-user-tie"></i>
+          <span id="admin-name">Manager Account</span>
+        </div>
+      </header>
+
+      <!-- Dashboard Panels -->
+      <div class="panels-container">
+        
+        <!-- Panel 1: Overview Panel -->
+        <div class="panel-content active" id="panel-overview">
+          <div class="stats-grid">
+            <div class="stat-box">
+              <div class="stat-info">
+                <h3>Total Inquiries</h3>
+                <p class="stat-num" id="stat-inquiries-count">0</p>
+              </div>
+              <div class="stat-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+            </div>
+            
+            <div class="stat-box">
+              <div class="stat-info">
+                <h3>Gallery Images</h3>
+                <p class="stat-num" id="stat-gallery-count">0</p>
+              </div>
+              <div class="stat-icon"><i class="fa-solid fa-images"></i></div>
+            </div>
+
+            <div class="stat-box">
+              <div class="stat-info">
+                <h3>Launch Status</h3>
+                <p class="stat-status gold-text">Active</p>
+              </div>
+              <div class="stat-icon"><i class="fa-solid fa-rocket"></i></div>
+            </div>
+          </div>
+
+          <div class="recent-activity">
+            <h2>Recent Customer Inquiries</h2>
+            <div class="table-container">
+              <table id="recent-inquiries-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Client Name</th>
+                    <th>Phone</th>
+                    <th>Property Type</th>
+                    <th>Message Snippet</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="recent-inquiries-body">
+                  <tr>
+                    <td colspan="6" class="no-data">No inquiries received yet.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2: Content Edit Panel -->
+        <div class="panel-content" id="panel-content-edit">
+          <form id="content-edit-form" class="dashboard-form">
+            <div class="form-section">
+              <h3>General Configuration</h3>
+              <div class="form-group">
+                <label for="edit-project-name">Project Name</label>
+                <input type="text" id="edit-project-name" name="projectName" required>
+              </div>
+              <div class="form-group">
+                <label for="edit-tagline">Project Tagline</label>
+                <input type="text" id="edit-tagline" name="tagline" required>
+              </div>
+              <div class="form-group">
+                <label for="edit-description">Landing Description</label>
+                <textarea id="edit-description" name="description" rows="4" required></textarea>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h3>Pricing Details</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="edit-price-res">Residential Price Info</label>
+                  <input type="text" id="edit-price-res" name="priceResidential" required>
+                </div>
+                <div class="form-group">
+                  <label for="edit-price-comm">Commercial Price Info</label>
+                  <input type="text" id="edit-price-comm" name="priceCommercial" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h3>Contacts & Location</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="edit-phone">Sales Desk Phone</label>
+                  <input type="text" id="edit-phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                  <label for="edit-email">Sales Support Email</label>
+                  <input type="email" id="edit-email" name="email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="edit-address">Physical Site Address</label>
+                <input type="text" id="edit-address" name="address" required>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="edit-rera">RERA Reg Number</label>
+                  <input type="text" id="edit-rera" name="reraNumber" required>
+                </div>
+                <div class="form-group">
+                  <label for="edit-launch">Launch/Possession Date</label>
+                  <input type="text" id="edit-launch" name="launchDate" required>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-save" id="btn-save-content">
+              <span class="btn-text">Save Changes</span>
+              <span class="btn-loader hidden"><i class="fa-solid fa-spinner fa-spin"></i></span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Panel 3: Gallery Manage Panel -->
+        <div class="panel-content" id="panel-gallery-manage">
+          <div class="gallery-management-layout">
+            
+            <!-- Upload Box -->
+            <div class="gallery-upload-card">
+              <h3>Upload Gallery Image</h3>
+              <form id="gallery-upload-form" class="dashboard-form">
+                <div class="form-group">
+                  <label for="upload-image">Select Image File</label>
+                  <div class="file-dropzone" id="file-dropzone">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <p>Drag & drop or Click to upload</p>
+                    <input type="file" id="upload-image" accept="image/*" required>
+                    <span id="selected-filename" class="selected-filename hidden">No file chosen</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="upload-caption">Image Title/Caption</label>
+                  <input type="text" id="upload-caption" placeholder="e.g. Grand Elevation at Dusk" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="upload-category">Asset Category</label>
+                  <select id="upload-category" required>
+                    <option value="" disabled selected>Select category</option>
+                    <option value="exterior">Exterior</option>
+                    <option value="interior">Interior</option>
+                    <option value="commercial">Commercial</option>
+                    <option value="amenity">Amenity</option>
+                    <option value="floorplan">Floor Plan</option>
+                  </select>
+                </div>
+
+                <button type="submit" class="btn-upload" id="btn-upload-submit">
+                  <span class="btn-text">Upload Photo</span>
+                  <span class="btn-loader hidden"><i class="fa-solid fa-spinner fa-spin"></i></span>
+                </button>
+              </form>
+            </div>
+
+            <!-- Existing Gallery Grid -->
+            <div class="gallery-display-panel">
+              <h3>Current Gallery Assets</h3>
+              <div class="gallery-manage-grid" id="admin-gallery-grid">
+                <!-- Injected via JavaScript -->
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Panel 4: Inquiries Panel -->
+        <div class="panel-content" id="panel-inquiries">
+          <div class="table-card">
+            <div class="table-header-row">
+              <h3>Customer Submissions</h3>
+              <button class="btn-refresh" id="btn-refresh-inquiries"><i class="fa-solid fa-arrows-rotate"></i> Refresh</button>
+            </div>
+            
+            <div class="table-container large-table">
+              <table id="inquiries-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Interest In</th>
+                    <th>Special Message</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="inquiries-body">
+                  <tr>
+                    <td colspan="7" class="no-data">Loading inquiries...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Message -->
+  <div id="admin-toast" class="admin-toast hidden">
+    <div class="toast-content">
+      <i class="fa-solid fa-check-circle toast-icon"></i>
+      <span id="admin-toast-message">Success! Settings saved.</span>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
