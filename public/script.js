@@ -5,46 +5,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Static Fallback Data (For GitHub Pages / Static Hosting)
   const fallbackContent = {
-    projectName: "Beverly Heights",
-    tagline: "Own the Height of Luxury. Elegant Design | Grand Elevation",
-    description: "Experience premium living and corporate prominence in Gota, Ahmedabad. Beverly Heights blends modern 3 BHK & 4 BHK luxury residences with state-of-the-art ground-floor showrooms and corporate offices. Designed for those who appreciate high elevations, grand design, and a prestigious address.",
+    projectName: "Emerald Heights",
+    tagline: "Superlative 3BHK Residences. Designed to Elevate Lifestyles.",
+    description: "Welcome to a landmark residential development featuring premium 3BHK configurations (240 to 265 Sq. Yd.) situated on a prominent 12 MT wide T.P.S. road. Architecturally composed of Towers A, B, C, and D, this sanctuary offers 26 lifestyle amenities, generous internal access loops, and expansive structural boundary margins of 5 MT, 6 MT, and 8 MT.",
     phone: "+91 98765 43210",
-    email: "sales@beverlyheights.in",
-    address: "Beverly Heights, near Vandematram Circle, Gota, Ahmedabad, Gujarat 382481",
-    reraNumber: "PR/GJ/AHMEDABAD/AHMEDABAD/Others/RAA99999/080626",
+    email: "sales@emeraldheights.in",
+    address: "Emerald Heights, Gota, Near Vandematram Circle, Ahmedabad, Gujarat 382481",
+    reraNumber: "PR/GJ/AHMEDABAD/AHMEDABAD/Others/RAA99999/090626",
     pricing: {
-      residential: "Starts from ₹85 Lakhs",
-      commercial: "Starts from ₹1.2 Crores"
+      residential: "Starts from ₹95 Lakhs",
+      commercial: "Towers A, B, C, D Exclusive Residential"
     },
     specifications: {
       residential: [
-        "Earthquake resistant RCC frame structure",
-        "Vitrified Italian marble-finish tiles in living/dining room",
-        "Laminated wooden flooring in master bedroom",
-        "Premium sanitary ware & fittings (Kohler/Jaquar)",
-        "UPVC sliding window frames with mosquito nets",
-        "Video door phone security system"
+        "Earthquake resistant RCC frame structure designed by structural engineers",
+        "Vitrified Italian marble-finish tiles in living, dining, and passage areas",
+        "Premium laminated wooden flooring in the master suite bedroom",
+        "Top-tier sanitary ware and chrome bathroom fittings (Kohler/Jaquar)",
+        "Durable UPVC sliding window frames with integrated mosquito meshes",
+        "Advanced video door phone and multi-tier security lobby integration"
       ],
-      commercial: [
-        "Double-height ceiling showrooms for maximum visibility",
-        "Separate dedicated elevators for corporate floors",
-        "Ample multi-level basement parking for staff & visitors",
-        "24/7 security with CCTV surveillance in common areas",
-        "High-speed fiber internet connection readiness",
-        "Power backup for all common services"
-      ]
+      commercial: []
     }
   };
 
   const fallbackGallery = [
-    { id: "1", url: "assets/images/hero_bg.png", caption: "Beverly Heights Grand Elevation", category: "exterior" },
-    { id: "2", url: "assets/images/lobby.png", caption: "Luxurious Double-Height Entrance Lobby", category: "interior" },
-    { id: "3", url: "assets/images/residential.png", caption: "Elegant 3BHK/4BHK Penthouse Living Space", category: "interior" },
-    { id: "4", url: "assets/images/commercial.png", caption: "Premium Ground-Floor Retail Showrooms", category: "commercial" },
-    { id: "5", url: "assets/images/amenities_pool.png", caption: "Sunset Rooftop Infinity Swimming Pool", category: "amenity" },
-    { id: "6", url: "assets/images/floor_plan_3bhk.png", caption: "3 BHK Premium Floor Plan Layout", category: "floorplan" },
-    { id: "7", url: "assets/images/floor_plan_4bhk.png", caption: "4 BHK Luxury Penthouse Floor Plan Layout", category: "floorplan" },
-    { id: "8", url: "assets/images/floor_plan_office.png", caption: "Corporate Office Floor Plan Layout", category: "floorplan" }
+    { id: "1", url: "assets/images/hero_render.png", caption: "Emerald Heights Premium Architecture Elevation", category: "exterior" },
+    { id: "2", url: "assets/images/lobby_render.png", caption: "Luxurious Double-Height Main Entrance Foyer", category: "interior" },
+    { id: "3", url: "assets/images/pool_render.png", caption: "Wellness Rooftop Infinity Swimming Pool & Splash Deck", category: "amenity" },
+    { id: "4", url: "assets/images/plan_type1.png", caption: "3BHK Type 1 Floor Plan Layout (240 Sq. Yd. - Towers A & B)", category: "floorplan" },
+    { id: "5", url: "assets/images/plan_type2.png", caption: "3BHK Type 2 Floor Plan Layout (240 Sq. Yd. - Towers A & B)", category: "floorplan" },
+    { id: "6", url: "assets/images/plan_type3.png", caption: "3BHK Type 3 Floor Plan Layout (245 Sq. Yd. - Towers A & B)", category: "floorplan" },
+    { id: "7", url: "assets/images/plan_type4.png", caption: "3BHK Type 4 Floor Plan Layout (250 Sq. Yd. - Tower D)", category: "floorplan" },
+    { id: "8", url: "assets/images/plan_type5.png", caption: "3BHK Type 5 Floor Plan Layout (265 Sq. Yd. - Tower C)", category: "floorplan" }
   ];
 
   // DOM Elements
@@ -52,12 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeToggle = document.getElementById('theme-toggle');
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const navMenu = document.getElementById('nav-menu');
-
-  // Specs Elements
-  const resSpecs3bhk = document.getElementById('res-specs-3bhk');
-  const resSpecs4bhk = document.getElementById('res-specs-4bhk');
-  const commSpecsShops = document.getElementById('comm-specs-shops');
-  const commSpecsOffices = document.getElementById('comm-specs-offices');
 
   // Gallery Elements
   const galleryGrid = document.getElementById('gallery-grid');
@@ -87,7 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Helper to resolve relative pathing on GitHub pages ---
   function resolveAssetUrl(url) {
     if (!url) return '';
-    // Strip leading slash if deployed on github.io to prevent root path routing issues
     if (url.startsWith('/') && window.location.hostname.includes('github.io')) {
       return url.substring(1);
     }
@@ -112,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (data.projectName) {
       const pNames = document.querySelectorAll('#val-project-name');
       pNames.forEach(el => {
-        el.innerHTML = `Own the Height of <span class="gold-text">${data.projectName}</span>`;
+        el.innerHTML = `Own the Height of <span class="green-text">${data.projectName}</span>`;
       });
     }
     if (data.tagline) {
@@ -142,45 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (data.address) {
       document.getElementById('val-address').innerText = data.address;
-    }
-
-    // Populate Specifications List
-    if (data.specifications?.residential) {
-      if (resSpecs3bhk) {
-        resSpecs3bhk.innerHTML = '';
-        data.specifications.residential.forEach(spec => {
-          const li = document.createElement('li');
-          li.innerText = spec;
-          resSpecs3bhk.appendChild(li);
-        });
-      }
-      if (resSpecs4bhk) {
-        resSpecs4bhk.innerHTML = '';
-        data.specifications.residential.forEach(spec => {
-          const li = document.createElement('li');
-          li.innerText = spec;
-          resSpecs4bhk.appendChild(li);
-        });
-      }
-    }
-
-    if (data.specifications?.commercial) {
-      if (commSpecsShops) {
-        commSpecsShops.innerHTML = '';
-        data.specifications.commercial.forEach(spec => {
-          const li = document.createElement('li');
-          li.innerText = spec;
-          commSpecsShops.appendChild(li);
-        });
-      }
-      if (commSpecsOffices) {
-        commSpecsOffices.innerHTML = '';
-        data.specifications.commercial.forEach(spec => {
-          const li = document.createElement('li');
-          li.innerText = spec;
-          commSpecsOffices.appendChild(li);
-        });
-      }
     }
   }
 
@@ -267,10 +214,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const messageTextarea = document.getElementById('form-message');
       
       const currentCategory = lightboxCategory.textContent.toLowerCase();
-      if (currentCategory === 'commercial') {
-        interestSelect.value = 'Commercial';
-      } else {
+      if (currentCategory === 'floorplan' || currentCategory === 'exterior' || currentCategory === 'interior') {
         interestSelect.value = 'Residential';
+      } else {
+        interestSelect.value = 'Brochure';
       }
 
       messageTextarea.value = `Hi, I am interested in details regarding "${lightboxCaption.textContent}" (${lightboxCategory.textContent}). Please contact me.`;
@@ -295,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- 5. Tab Switchers (Residences & Commercial Specifications) ---
+  // --- 5. Tab Switchers (Overview & Residences) ---
   const tabButtons = document.querySelectorAll('.tab-btn');
   tabButtons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -379,7 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (icon) {
       if (isSuccess) {
         icon.className = 'fa-solid fa-circle-check toast-icon';
-        icon.style.color = 'var(--accent-gold)';
+        icon.style.color = 'var(--accent-green)';
       } else {
         icon.className = 'fa-solid fa-triangle-exclamation toast-icon';
         icon.style.color = '#ef4444';
@@ -435,15 +382,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = await response.json();
 
         if (response.ok) {
-          showToast('Inquiry Received', 'Thank you! Your request has been recorded. A sales manager will contact you shortly.', true);
+          showToast('Request Submitted', 'Thank you! Your request has been recorded. A sales representative will contact you shortly.', true);
           inquiryForm.reset();
         } else {
           showToast('Submission Failed', data.error || 'Please double-check your form and try again.', false);
         }
       } catch (err) {
-        console.warn('Backend server offline. Storing inquiry inside browser LocalStorage.');
+        console.warn('Backend server offline. Storing request inside browser LocalStorage.');
         
-        // Push inquiry into local storage for dynamic demo review
         const localInquiries = JSON.parse(localStorage.getItem('beverly_inquiries') || '[]');
         localInquiries.push({
           id: Date.now().toString(),
@@ -452,7 +398,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         localStorage.setItem('beverly_inquiries', JSON.stringify(localInquiries));
 
-        showToast('Inquiry Submitted (Demo)', 'Thank you! The server is offline, so your inquiry was saved locally inside your browser cache.', true);
+        showToast('Request Saved (Demo)', 'Thank you! The server is offline, so your inquiry was saved locally inside your browser cache.', true);
         inquiryForm.reset();
       } finally {
         if (btnSubmit) {
@@ -492,7 +438,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const interestSelect = document.getElementById('form-interest');
     const messageTextarea = document.getElementById('form-message');
 
-    if (interestSelect) interestSelect.value = propertyType;
+    if (interestSelect) {
+      if (propertyType.includes('Brochure') || propertyType.includes('PDF')) {
+        interestSelect.value = 'Brochure';
+      } else {
+        interestSelect.value = 'Residential';
+      }
+    }
     if (messageTextarea) messageTextarea.value = messageDetail;
   };
 
