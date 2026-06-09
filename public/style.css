@@ -617,7 +617,7 @@ section {
   font-size: 0.92rem;
   color: var(--text-secondary);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.8rem;
 }
 
@@ -626,6 +626,8 @@ section {
   font-family: 'Font Awesome 6 Free';
   font-weight: 900;
   color: var(--accent-gold);
+  flex-shrink: 0;
+  margin-top: 4px;
 }
 
 .tab-visual {
@@ -1438,6 +1440,10 @@ body.light-theme .footer {
     padding: 0 1.25rem;
   }
 
+  .navbar-container {
+    padding: 0 1.25rem;
+  }
+
   .mobile-menu-btn {
     display: block;
   }
@@ -1475,7 +1481,7 @@ body.light-theme .footer {
   }
 
   .tab-content {
-    padding: 2.2rem;
+    padding: 1.5rem;
   }
 
   .tab-btn {
@@ -1486,6 +1492,10 @@ body.light-theme .footer {
   .form-row {
     grid-template-columns: 1fr;
     gap: 0;
+  }
+
+  .proximity-card {
+    padding: 1.75rem;
   }
 
   .contact-form-wrapper {
@@ -1524,8 +1534,34 @@ body.light-theme .footer {
 }
 
 @media (max-width: 480px) {
+  .navbar-container {
+    padding: 0 0.75rem;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .theme-toggle-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.95rem;
+  }
+
+  .mobile-menu-btn {
+    font-size: 1.15rem;
+  }
+
   .hero-title {
     font-size: 2.1rem;
+  }
+
+  .hero-desc {
+    font-size: 0.95rem;
+  }
+
+  .hero-img {
+    height: 280px;
   }
 
   .hero-buttons {
@@ -1533,13 +1569,43 @@ body.light-theme .footer {
     gap: 1rem;
   }
 
+  .about-img {
+    height: 260px;
+  }
+
   .spec-overview-grid {
     grid-template-columns: 1fr;
+  }
+
+  .tab-content {
+    padding: 1rem;
+  }
+
+  .tab-btn {
+    font-size: 0.85rem;
+    padding: 0.95rem 0.4rem;
+  }
+
+  .tab-visual {
+    padding: 0.75rem;
+  }
+
+  .proximity-card {
+    padding: 1.25rem;
   }
 
   .map-card {
     height: 280px;
   }
+
+  .map-labels span {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.65rem;
+  }
+
+  .l-sg { top: 15%; left: 10%; }
+  .l-circle { top: 30%; left: 50%; }
+  .l-univ { top: 75%; left: 15%; }
 
   .amenities-grid {
     grid-template-columns: 1fr;
@@ -1547,6 +1613,10 @@ body.light-theme .footer {
 
   .gallery-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-form-wrapper {
+    padding: 1.75rem 1.25rem;
   }
 }
 
